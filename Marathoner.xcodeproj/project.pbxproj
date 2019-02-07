@@ -12,6 +12,7 @@
 		FC8CBC16220BD77300E6BA82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8CBC14220BD77300E6BA82 /* Main.storyboard */; };
 		FC8CBC18220BD77400E6BA82 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC8CBC17220BD77400E6BA82 /* Assets.xcassets */; };
 		FC8CBC1B220BD77400E6BA82 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC8CBC19220BD77400E6BA82 /* LaunchScreen.storyboard */; };
+		FC8CBC25220BD9C600E6BA82 /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC24220BD9C600E6BA82 /* DateModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		FC8CBC17220BD77400E6BA82 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC8CBC1A220BD77400E6BA82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC8CBC1C220BD77400E6BA82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC8CBC24220BD9C600E6BA82 /* DateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,8 @@
 		FC8CBC0F220BD77300E6BA82 /* Marathoner */ = {
 			isa = PBXGroup;
 			children = (
+				FC8CBC23220BD9B000E6BA82 /* Data Layer */,
+				FC8CBC22220BD9A800E6BA82 /* Views */,
 				FC8CBC10220BD77300E6BA82 /* AppDelegate.swift */,
 				FC8CBC12220BD77300E6BA82 /* ViewController.swift */,
 				FC8CBC14220BD77300E6BA82 /* Main.storyboard */,
@@ -62,6 +66,21 @@
 				FC8CBC1C220BD77400E6BA82 /* Info.plist */,
 			);
 			path = Marathoner;
+			sourceTree = "<group>";
+		};
+		FC8CBC22220BD9A800E6BA82 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FC8CBC23220BD9B000E6BA82 /* Data Layer */ = {
+			isa = PBXGroup;
+			children = (
+				FC8CBC24220BD9C600E6BA82 /* DateModel.swift */,
+			);
+			path = "Data Layer";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +156,7 @@
 			files = (
 				FC8CBC13220BD77300E6BA82 /* ViewController.swift in Sources */,
 				FC8CBC11220BD77300E6BA82 /* AppDelegate.swift in Sources */,
+				FC8CBC25220BD9C600E6BA82 /* DateModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
