@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WorkoutViewController.swift
 //  Marathoner
 //
 //  Created by Jonathan Wong on 2/6/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WorkoutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
