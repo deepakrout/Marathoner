@@ -15,6 +15,7 @@
 		FC8CBC25220BD9C600E6BA82 /* DateModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC24220BD9C600E6BA82 /* DateModel.swift */; };
 		FC8CBC27220BEEE800E6BA82 /* QuoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC26220BEEE800E6BA82 /* QuoteStore.swift */; };
 		FC8CBC29220BF19D00E6BA82 /* TableViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC28220BF19D00E6BA82 /* TableViewAction.swift */; };
+		FC8CBC2B220BF2B000E6BA82 /* RunLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC2A220BF2B000E6BA82 /* RunLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FC8CBC24220BD9C600E6BA82 /* DateModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateModel.swift; sourceTree = "<group>"; };
 		FC8CBC26220BEEE800E6BA82 /* QuoteStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteStore.swift; sourceTree = "<group>"; };
 		FC8CBC28220BF19D00E6BA82 /* TableViewAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAction.swift; sourceTree = "<group>"; };
+		FC8CBC2A220BF2B000E6BA82 /* RunLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				FC8CBC24220BD9C600E6BA82 /* DateModel.swift */,
 				FC8CBC26220BEEE800E6BA82 /* QuoteStore.swift */,
 				FC8CBC28220BF19D00E6BA82 /* TableViewAction.swift */,
+				FC8CBC2A220BF2B000E6BA82 /* RunLogic.swift */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -160,6 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8CBC2B220BF2B000E6BA82 /* RunLogic.swift in Sources */,
 				FC8CBC29220BF19D00E6BA82 /* TableViewAction.swift in Sources */,
 				FC8CBC13220BD77300E6BA82 /* ViewController.swift in Sources */,
 				FC8CBC11220BD77300E6BA82 /* AppDelegate.swift in Sources */,
