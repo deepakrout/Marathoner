@@ -16,6 +16,13 @@
 		FC8CBC27220BEEE800E6BA82 /* QuoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC26220BEEE800E6BA82 /* QuoteStore.swift */; };
 		FC8CBC29220BF19D00E6BA82 /* TableViewAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC28220BF19D00E6BA82 /* TableViewAction.swift */; };
 		FC8CBC2B220BF2B000E6BA82 /* RunLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC2A220BF2B000E6BA82 /* RunLogic.swift */; };
+		FC8CBC2D220C015200E6BA82 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC2C220C015200E6BA82 /* DateTableViewCell.swift */; };
+		FC8CBC2F220C015A00E6BA82 /* DatePickerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC2E220C015A00E6BA82 /* DatePickerTableViewCell.swift */; };
+		FC8CBC31220C016100E6BA82 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC30220C016100E6BA82 /* WorkoutTableViewCell.swift */; };
+		FC8CBC33220C017000E6BA82 /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC32220C017000E6BA82 /* OverviewTableViewCell.swift */; };
+		FC8CBC35220C01C400E6BA82 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC34220C01C400E6BA82 /* DateConverter.swift */; };
+		FC8CBC37220C01CE00E6BA82 /* DateLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC36220C01CE00E6BA82 /* DateLogic.swift */; };
+		FC8CBC39220C02F200E6BA82 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8CBC38220C02F200E6BA82 /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +37,13 @@
 		FC8CBC26220BEEE800E6BA82 /* QuoteStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuoteStore.swift; sourceTree = "<group>"; };
 		FC8CBC28220BF19D00E6BA82 /* TableViewAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewAction.swift; sourceTree = "<group>"; };
 		FC8CBC2A220BF2B000E6BA82 /* RunLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunLogic.swift; sourceTree = "<group>"; };
+		FC8CBC2C220C015200E6BA82 /* DateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		FC8CBC2E220C015A00E6BA82 /* DatePickerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerTableViewCell.swift; sourceTree = "<group>"; };
+		FC8CBC30220C016100E6BA82 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		FC8CBC32220C017000E6BA82 /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
+		FC8CBC34220C01C400E6BA82 /* DateConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
+		FC8CBC36220C01CE00E6BA82 /* DateLogic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateLogic.swift; sourceTree = "<group>"; };
+		FC8CBC38220C02F200E6BA82 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,10 @@
 		FC8CBC22220BD9A800E6BA82 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC8CBC2C220C015200E6BA82 /* DateTableViewCell.swift */,
+				FC8CBC2E220C015A00E6BA82 /* DatePickerTableViewCell.swift */,
+				FC8CBC30220C016100E6BA82 /* WorkoutTableViewCell.swift */,
+				FC8CBC32220C017000E6BA82 /* OverviewTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -85,9 +103,12 @@
 			isa = PBXGroup;
 			children = (
 				FC8CBC24220BD9C600E6BA82 /* DateModel.swift */,
+				FC8CBC38220C02F200E6BA82 /* DataStore.swift */,
 				FC8CBC26220BEEE800E6BA82 /* QuoteStore.swift */,
 				FC8CBC28220BF19D00E6BA82 /* TableViewAction.swift */,
 				FC8CBC2A220BF2B000E6BA82 /* RunLogic.swift */,
+				FC8CBC34220C01C400E6BA82 /* DateConverter.swift */,
+				FC8CBC36220C01CE00E6BA82 /* DateLogic.swift */,
 			);
 			path = "Data Layer";
 			sourceTree = "<group>";
@@ -163,12 +184,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8CBC39220C02F200E6BA82 /* DataStore.swift in Sources */,
+				FC8CBC2D220C015200E6BA82 /* DateTableViewCell.swift in Sources */,
 				FC8CBC2B220BF2B000E6BA82 /* RunLogic.swift in Sources */,
 				FC8CBC29220BF19D00E6BA82 /* TableViewAction.swift in Sources */,
 				FC8CBC13220BD77300E6BA82 /* WorkoutViewController.swift in Sources */,
+				FC8CBC35220C01C400E6BA82 /* DateConverter.swift in Sources */,
+				FC8CBC33220C017000E6BA82 /* OverviewTableViewCell.swift in Sources */,
+				FC8CBC37220C01CE00E6BA82 /* DateLogic.swift in Sources */,
 				FC8CBC11220BD77300E6BA82 /* AppDelegate.swift in Sources */,
 				FC8CBC27220BEEE800E6BA82 /* QuoteStore.swift in Sources */,
 				FC8CBC25220BD9C600E6BA82 /* DateModel.swift in Sources */,
+				FC8CBC31220C016100E6BA82 /* WorkoutTableViewCell.swift in Sources */,
+				FC8CBC2F220C015A00E6BA82 /* DatePickerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +345,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XL9HN7CJ32;
 				INFOPLIST_FILE = Marathoner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -335,6 +364,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XL9HN7CJ32;
 				INFOPLIST_FILE = Marathoner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -12,10 +12,17 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var dataStore: DataStore?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let startsModel = DateModel(title: "Starts", date: Date(), isValid: true)
+        let endsModel = DateModel(title: "Ends", date: Date(), isValid: true)
+        dataStore = DataStore(dateModels: [startsModel, endsModel], weeks: 0)
+        
+        let viewController = window?.rootViewController as! WorkoutViewController
+        viewController.dataStore = dataStore
+        
         return true
     }
 
