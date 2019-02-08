@@ -106,7 +106,6 @@ extension WorkoutViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == DataStore.Section.date.rawValue {
-            #warning("Use perform bach updates instead, beginUpdates will be deprecated in a future release")
             tableView.beginUpdates()
             if let datePickerIndexPath = datePickerIndexPath, datePickerIndexPath.row - 1 == indexPath.row {
                 tableView.deleteRows(at: [datePickerIndexPath], with: .automatic)
