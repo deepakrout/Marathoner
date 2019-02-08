@@ -16,7 +16,7 @@ extension DateFormatter: DateConvertible {}
 
 public class DateConverter {
     
-    public static let shared = DateConverter()
+    static let shared = DateConverter()
     
     private let dayMonthYearDateFormatter: DateConvertible = {
        let dateFormatter = DateFormatter()
@@ -26,7 +26,7 @@ public class DateConverter {
         return dateFormatter
     }()
     
-    public func formatDate(_ date: Date) -> String {
+    func formatDate(_ date: Date) -> String {
         return dayMonthYearDateFormatter.string(from: date)
     }
 }

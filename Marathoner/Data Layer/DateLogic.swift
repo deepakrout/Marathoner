@@ -10,12 +10,12 @@ import Foundation
 
 public struct DateLogic {
 
-    public static func weeks(from: Date, to: Date) -> Int {
+    static func weeks(from: Date, to: Date) -> Int {
         let components = Calendar.current.dateComponents([.weekOfMonth], from: from, to: to)
         return components.weekOfMonth ?? 0
     }
     
-    public static func validate(from: Date, to: Date) -> Bool {
+    static func validate(from: Date, to: Date) -> Bool {
         if from < to {
             return true
         } else {
