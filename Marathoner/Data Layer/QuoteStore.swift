@@ -1,6 +1,6 @@
 //
 //  QuoteStore.swift
-//  GettingStartedXcode
+//  Marathoner
 //
 //  Created by Jonathan Wong on 1/25/19.
 //  Copyright © 2019 Jonathan Wong. All rights reserved.

@@ -1,6 +1,6 @@
 //
 //  DateConverter.swift
-//  GettingStartedXcode
+//  Marathoner
 //
 //  Created by Jonathan Wong on 1/1/19.
 //  Copyright © 2019 Jonathan Wong. All rights reserved.
