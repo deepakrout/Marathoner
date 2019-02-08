@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -19,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="sav-gm-CZU">
+                            <stackView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" distribution="fillProportionally" spacing="66" translatesAutoresizingMaskIntoConstraints="NO" id="sav-gm-CZU">
                                 <rect key="frame" x="84" y="54" width="246" height="115"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="T74-7M-YeZ" userLabel="Half Marathon Stack View">
@@ -63,7 +62,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="J4C-27-BO6" userLabel="Event Table View">
-                                <rect key="frame" x="0.0" y="174" width="414" height="688"/>
+                                <rect key="frame" x="0.0" y="179" width="414" height="683"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateTableViewCell" rowHeight="60" id="23O-SA-nii" customClass="DateTableViewCell" customModule="Marathoner" customModuleProvider="target">
@@ -215,7 +214,7 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="J4C-27-BO6" secondAttribute="bottom" id="8yG-1R-4TA"/>
                             <constraint firstItem="J4C-27-BO6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="D6g-ra-6Km"/>
                             <constraint firstItem="sav-gm-CZU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="Qyc-7J-1zI"/>
-                            <constraint firstItem="J4C-27-BO6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="130" id="toV-9H-UoP"/>
+                            <constraint firstItem="J4C-27-BO6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="135" id="toV-9H-UoP"/>
                             <constraint firstItem="sav-gm-CZU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xJv-Wc-fQ8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
