@@ -9,10 +9,9 @@
 import UIKit
 
 class WorkoutTableViewCell: UITableViewCell {
+    @IBOutlet weak private var workoutLabel: UILabel!
+    @IBOutlet weak private var quoteLabel: UILabel!
 
-    @IBOutlet weak var workoutLabel: UILabel!
-    @IBOutlet weak var quoteLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,14 +22,13 @@ class WorkoutTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func updateCell(title: String, quote: String) {
         workoutLabel.text = "\(title) mi"
         quoteLabel.text = quote
     }
-    
+
     class func height() -> CGFloat {
         return 60.0
     }
-
 }

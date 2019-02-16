@@ -6,13 +6,14 @@
 //  Copyright © 2018 Jonathan Wong. All rights reserved.
 //
 
+import DateUtilities
 import UIKit
 
 class DateTableViewCell: UITableViewCell {
+    @IBOutlet weak private var dateStackView: UIStackView!
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var dateLabel: UILabel!
 
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var dateLabel: UILabel!
-    
     var dateModel: DateModel? {
         didSet {
             if let dateModel = dateModel {
@@ -20,7 +21,7 @@ class DateTableViewCell: UITableViewCell {
             }
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,7 +32,7 @@ class DateTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func updateCell(title: String, date: Date) {
         titleLabel.text = title
         dateLabel.text = DateConverter.shared.formatDate(date)
@@ -58,5 +59,3 @@ class DateTableViewCell: UITableViewCell {
         return 60.0
     }
 }
-
-

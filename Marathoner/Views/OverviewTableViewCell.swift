@@ -9,10 +9,9 @@
 import UIKit
 
 class OverviewTableViewCell: UITableViewCell {
+    @IBOutlet weak private var weeksLabel: UILabel!
+    @IBOutlet weak private var totalDistanceLabel: UILabel!
 
-    @IBOutlet weak var weeksLabel: UILabel!
-    @IBOutlet weak var totalDistanceLabel: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -23,7 +22,7 @@ class OverviewTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     func updateCell(weeks: Int, distance: Int) {
         if weeks == 0 {
             weeksLabel.text = ""
