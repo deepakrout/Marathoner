@@ -10,7 +10,7 @@ import DateUtilities
 import UIKit
 
 class DateTableViewCell: UITableViewCell {
-    @IBOutlet weak private var dateStackView: UIStackView!
+    @IBOutlet weak private var dateContainerStackView: UIStackView!
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var dateLabel: UILabel!
 

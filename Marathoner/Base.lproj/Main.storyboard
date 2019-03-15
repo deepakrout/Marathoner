@@ -65,7 +65,7 @@
                                 <rect key="frame" x="0.0" y="179" width="414" height="683"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateTableViewCell" rowHeight="60" id="23O-SA-nii" customClass="DateTableViewCell" customModule="Marathoner" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DateTableViewCell" rowHeight="60" id="23O-SA-nii" customClass="DateTableViewCell" customModule="Marathoner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="23O-SA-nii" id="bwO-Uu-PXi">
@@ -98,11 +98,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="dateContainerStackView" destination="ZgR-D5-1c6" id="kcr-g9-0HI"/>
                                             <outlet property="dateLabel" destination="YHT-WN-g5P" id="OzA-Sa-uQ7"/>
                                             <outlet property="titleLabel" destination="dig-7P-zql" id="Cd8-BL-bOw"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DatePickerTableViewCell" rowHeight="162" id="l2R-U6-hNo" customClass="DatePickerTableViewCell" customModule="Marathoner" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DatePickerTableViewCell" rowHeight="162" id="l2R-U6-hNo" customClass="DatePickerTableViewCell" customModule="Marathoner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="115.5" width="414" height="162"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="l2R-U6-hNo" id="2Nc-uv-wqJ">
@@ -127,7 +128,7 @@
                                             <outlet property="datePicker" destination="Gil-7F-YOz" id="HF6-Vc-eBb"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" rowHeight="60" id="XoI-Q2-miD" customClass="WorkoutTableViewCell" customModule="Marathoner" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutTableViewCell" rowHeight="60" id="XoI-Q2-miD" customClass="WorkoutTableViewCell" customModule="Marathoner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="277.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XoI-Q2-miD" id="dRp-5D-hou">
@@ -164,7 +165,7 @@
                                             <outlet property="workoutLabel" destination="DDp-3f-eO8" id="vHk-4C-t2r"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OverviewTableViewCell" rowHeight="60" id="m1K-Vb-oxz" customClass="OverviewTableViewCell" customModule="Marathoner" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="OverviewTableViewCell" rowHeight="60" id="m1K-Vb-oxz" customClass="OverviewTableViewCell" customModule="Marathoner" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="337.5" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="m1K-Vb-oxz" id="n1P-ra-Mci">

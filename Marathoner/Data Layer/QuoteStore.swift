@@ -9,7 +9,6 @@
 import Foundation
 
 final class QuoteStore {
-    
     static let shared = QuoteStore()
     
     static let quotes = [
