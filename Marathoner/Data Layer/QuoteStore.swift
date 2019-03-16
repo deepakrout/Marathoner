@@ -24,7 +24,7 @@ final class QuoteStore {
         "You can do it!",
         "One step at a time!",
         "One mile at a time!",
-        "You're on 🔥!"
+        "You're on 🔥!",
         "Keep up the good work!"
     ]
 
