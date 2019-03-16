@@ -23,7 +23,8 @@ final class QuoteStore {
         "See you at the finish line!",
         "You can do it!",
         "One step at a time!",
-        "One mile at a time!"
+        "One mile at a time!",
+        "You're on 🔥!"
     ]
 
     class func quote() -> String {
