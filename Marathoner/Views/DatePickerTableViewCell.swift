@@ -8,17 +8,16 @@
 
 import UIKit
 
-protocol DatePickerDelegate: class {
+protocol DatePickerDelegate: AnyObject {
     func didChangeDate(date: Date, indexPath: IndexPath)
 }
 
 class DatePickerTableViewCell: UITableViewCell {
+    @IBOutlet weak private var datePicker: UIDatePicker!
 
-    @IBOutlet weak var datePicker: UIDatePicker!
-    
     var indexPath: IndexPath?
     weak var delegate: DatePickerDelegate?
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         datePicker.addTarget(self, action: #selector(dateDidChange), for: .valueChanged)
@@ -34,8 +33,7 @@ class DatePickerTableViewCell: UITableViewCell {
         datePicker.setDate(date, animated: true)
         self.indexPath = indexPath
     }
-    
-    
+
     @objc func dateDidChange(_ sender: UIDatePicker) {
         guard let indexPath = indexPath else {
             return
@@ -43,7 +41,7 @@ class DatePickerTableViewCell: UITableViewCell {
         let dateIndexPath = IndexPath(row: indexPath.row - 1, section: indexPath.section)
         delegate?.didChangeDate(date: sender.date, indexPath: dateIndexPath)
     }
-    
+
     class func height() -> CGFloat {
         return 162.0
     }

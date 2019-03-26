@@ -9,9 +9,7 @@
 import Foundation
 
 struct DateModel {
-    
     var title: String
     var date: Date
     var isValid: Bool
-    
 }

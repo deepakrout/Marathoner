@@ -20,7 +20,7 @@ struct TableViewAction {
     let indexPathAction: IndexPathAction
     let indexPaths: [IndexPath]?
     let indexSet: IndexSet?
-    
+
     init(indexPathAction: IndexPathAction, indexPaths: [IndexPath]? = nil, indexSet: IndexSet? = nil) {
         self.indexPathAction = indexPathAction
         self.indexPaths = indexPaths

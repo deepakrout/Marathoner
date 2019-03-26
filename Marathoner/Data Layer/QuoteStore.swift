@@ -9,7 +9,6 @@
 import Foundation
 
 final class QuoteStore {
-    
     static let shared = QuoteStore()
     
     static let quotes = [
@@ -25,6 +24,8 @@ final class QuoteStore {
         "You can do it!",
         "One step at a time!",
         "One mile at a time!",
+        "You're on 🔥!",
+        "Keep up the good work!"
     ]
 
     class func quote() -> String {

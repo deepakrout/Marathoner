@@ -6,21 +6,21 @@
 //  Copyright © 2019 Jonathan Wong. All rights reserved.
 //
 
+import DateUtilities
 import Foundation
 
 final class DataStore {
-    
     enum Section: Int {
         case date
         case workout
         case overview
     }
-    
+
     enum Row: Int {
         case start
         case end
     }
-    
+
     var weeks: Int
     var dateModels: [DateModel]
     var previousWeeks = 0
@@ -28,7 +28,7 @@ final class DataStore {
     var runs: [Int] = []
     var totalDistance = 0
     var fullMarathon = true
-    
+
     init(dateModels: [DateModel], weeks: Int) {
         self.dateModels = dateModels
         self.weeks = weeks
@@ -36,38 +36,30 @@ final class DataStore {
 }
 
 extension DataStore {
-    
     func setValid() {
-        for i in 0..<self.dateModels.count {
-            dateModels[i].isValid = true
+        for index in 0..<self.dateModels.count {
+            dateModels[index].isValid = true
         }
     }
 }
 
 extension DataStore {
-    
     var start: DateModel {
-        get {
             return dateModels[Row.start.rawValue]
-        }
     }
-    
+
     var end: DateModel {
-        get {
             return dateModels[Row.end.rawValue]
-        }
     }
-    
+
     var difference: Int {
         return weeks - previousWeeks
     }
-    
+
     var insertableSectionsIndexPaths: IndexSet {
-        get {
-            return IndexSet(integersIn: Section.workout.rawValue...Section.overview.rawValue)
-        }
+        return IndexSet(integersIn: Section.workout.rawValue...Section.overview.rawValue)
     }
-    
+
     func indexPathsToInsert(previousWeeks: Int, difference: Int, section: Int) -> [IndexPath] {
         var indexPaths = [IndexPath]()
         for row in previousWeeks..<(previousWeeks + difference) {
@@ -75,7 +67,7 @@ extension DataStore {
         }
         return indexPaths
     }
-    
+
     func indexPathsToReload(limit: Int, section: Int) -> [IndexPath] {
         var indexPaths = [IndexPath]()
         for index in 0..<limit {
@@ -83,7 +75,7 @@ extension DataStore {
         }
         return indexPaths
     }
-    
+
     func indexPathsToDelete(previousWeeks: Int, end: Int, section: Int) -> [IndexPath] {
         var indexPaths = [IndexPath]()
         for index in stride(from: previousWeeks - 1, to: end - 1, by: -1) {
@@ -91,16 +83,16 @@ extension DataStore {
         }
         return indexPaths
     }
-    
+
     func indexPathActions(from: Date, to: Date, indexPath: IndexPath) -> [TableViewAction] {
         var tableViewActions = [TableViewAction]()
         let valid = DateLogic.validate(from: from, to: to)
         if !valid {
             dateModels[indexPath.row].isValid = false
-            
+
             // reload the invalid row with date
             tableViewActions.append(TableViewAction(indexPathAction: .reload, indexPaths: [indexPath]))
-            
+
             // remove workout
             if workoutVisible {
                 tableViewActions.append(TableViewAction(indexPathAction: .deleteSection, indexSet: insertableSectionsIndexPaths))
@@ -118,7 +110,7 @@ extension DataStore {
             }
             // reload the valid row with date
             tableViewActions.append(TableViewAction(indexPathAction: .reload, indexPaths: [indexPath]))
-            
+
             weeks = DateLogic.weeks(from: from, to: to)
             if weeks == 0 && !workoutVisible {
                 // nothing to update
@@ -135,7 +127,7 @@ extension DataStore {
                 workoutVisible = true
             } else {
                 let difference = weeks - previousWeeks
-                
+
                 if difference == 0 {
                     // no insertion or deletion required
                     return tableViewActions
@@ -160,7 +152,7 @@ extension DataStore {
             }
         }
         previousWeeks = weeks
-        
+
         return tableViewActions
     }
 }

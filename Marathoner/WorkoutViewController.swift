@@ -9,55 +9,52 @@
 import UIKit
 
 class WorkoutViewController: UIViewController {
+    @IBOutlet weak private var halfMarathonButton: UIButton!
+    @IBOutlet weak private var fullMarathonButton: UIButton!
+    @IBOutlet weak private var eventTableView: UITableView!
+    @IBOutlet weak private var halfMarathonLabel: UILabel!
+    @IBOutlet weak private var fullMarathonLabel: UILabel!
 
-    @IBOutlet weak var halfMarathonButton: UIButton!
-    @IBOutlet weak var fullMarathonButton: UIButton!
-    @IBOutlet weak var eventTableView: UITableView!
-    @IBOutlet weak var halfMarathonLabel: UILabel!
-    @IBOutlet weak var fullMarathonLabel: UILabel!
-    
     var dataStore: DataStore!
     var quoteStore: QuoteStore!
     var datePickerIndexPath: IndexPath?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         halfMarathonButton.addTarget(self, action: #selector(onHalfMarathonButtonPressed(_:)), for: .touchUpInside)
         fullMarathonButton.addTarget(self, action: #selector(onFullMarathonButtonPressed(_:)), for: .touchUpInside)
-        
+
         view.addConstraint(NSLayoutConstraint(item: halfMarathonLabel, attribute: .centerX, relatedBy: .equal, toItem: halfMarathonButton, attribute: .centerX, multiplier: 1.0, constant: 0.0))
         view.addConstraint(NSLayoutConstraint(item: halfMarathonLabel, attribute: .top, relatedBy: .equal, toItem: halfMarathonButton, attribute: .bottom, multiplier: 1.0, constant: 8.0))
         view.addConstraint(NSLayoutConstraint(item: halfMarathonLabel, attribute: .bottom, relatedBy: .equal, toItem: eventTableView, attribute: .top, multiplier: 1.0, constant: 8.0))
     }
-    
+
     func datePickerInsertIndexPath(indexPath: IndexPath) -> IndexPath {
         if let datePickerIndexPath = datePickerIndexPath, datePickerIndexPath.row < indexPath.row {
             return indexPath
         } else {
             return IndexPath(row: indexPath.row + 1, section: indexPath.section)
         }
-        
     }
-    
+
     @objc func onHalfMarathonButtonPressed(_ sender: UIButton) {
         dataStore.fullMarathon = false
     }
-    
+
     @objc func onFullMarathonButtonPressed(_ sender: UIButton) {
         dataStore.fullMarathon = true
     }
 }
 
 extension WorkoutViewController: UITableViewDataSource {
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         if dataStore.workoutVisible {
             return 3
         }
         return 1
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == DataStore.Section.date.rawValue {
             if datePickerIndexPath != nil {
@@ -73,39 +70,50 @@ extension WorkoutViewController: UITableViewDataSource {
             return 0
         }
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == DataStore.Section.date.rawValue {
             if datePickerIndexPath == indexPath {
+                // swiftlint:disable force_cast
                 let datePickerCell = tableView.dequeueReusableCell(withIdentifier: "DatePickerTableViewCell") as! DatePickerTableViewCell
+                // swiftlint:enable force_cast
                 datePickerCell.updateCell(date: dataStore.dateModels[indexPath.row - 1].date, indexPath: indexPath)
                 datePickerCell.delegate = self
-                
+
                 return datePickerCell
             } else {
+                // swiftlint:disable force_cast
                 let dateCell = tableView.dequeueReusableCell(withIdentifier: "DateTableViewCell") as! DateTableViewCell
+                // swiftlint:enable force_cast
                 dateCell.updateCell(with: dataStore.dateModels[indexPath.row])
-                
+
                 return dateCell
             }
         } else if indexPath.section == DataStore.Section.workout.rawValue {
+            // swiftlint:disable force_cast
             let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutTableViewCell") as! WorkoutTableViewCell
+            // swiftlint:enable force_cast
             cell.updateCell(title: "\(dataStore.runs[indexPath.row])", quote: QuoteStore.quote())
-            
+
             return cell
         } else {
+            // swiftlint:disable force_cast
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewTableViewCell") as! OverviewTableViewCell
+            // swiftlint:enable force_cast
             cell.updateCell(weeks: dataStore.weeks, distance: dataStore.totalDistance)
-            
+
             return cell
         }
     }
 }
 
+// MARK: - UITableViewDelegate
 extension WorkoutViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == DataStore.Section.date.rawValue {
+            // TODO: - update
+            // FIXME: - use performBachUpdates
+            #warning("Use -performBatchUpdates:completion: instead of these methods, which will be deprecated in a future release")
             tableView.beginUpdates()
             if let datePickerIndexPath = datePickerIndexPath, datePickerIndexPath.row - 1 == indexPath.row {
                 tableView.deleteRows(at: [datePickerIndexPath], with: .automatic)
@@ -120,12 +128,10 @@ extension WorkoutViewController: UITableViewDelegate {
             tableView.deselectRow(at: indexPath, animated: true)
             tableView.endUpdates()
         } else if indexPath.section == DataStore.Section.overview.rawValue {
-            
         } else {
-            
         }
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == DataStore.Section.date.rawValue {
             if datePickerIndexPath == indexPath {
@@ -142,11 +148,10 @@ extension WorkoutViewController: UITableViewDelegate {
 }
 
 extension WorkoutViewController: DatePickerDelegate {
-    
     func didChangeDate(date: Date, indexPath: IndexPath) {
         // set the date from what's in the picker
         dataStore.dateModels[indexPath.row].date = date
-        
+
         let tableViewActions = dataStore.indexPathActions(from: dataStore.start.date, to: dataStore.end.date, indexPath: indexPath)
         eventTableView.beginUpdates()
         _ = tableViewActions.map { action in
