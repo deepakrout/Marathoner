@@ -24,6 +24,7 @@
 		FC8CBDA8220F848A00E6BA82 /* DateUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC8CBDA7220F848A00E6BA82 /* DateUtilities.framework */; };
 		FC8CBDA9220F848A00E6BA82 /* DateUtilities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FC8CBDA7220F848A00E6BA82 /* DateUtilities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FC9EC10F221788E900FDDEA9 /* swiftlint.sh in Resources */ = {isa = PBXBuildFile; fileRef = FC9EC10E221788E900FDDEA9 /* swiftlint.sh */; };
+		FCC16AF62245EA9C008F9CF6 /* DemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC16AF52245EA9C008F9CF6 /* DemoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +60,7 @@
 		FC8CBC38220C02F200E6BA82 /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		FC8CBDA7220F848A00E6BA82 /* DateUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DateUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC9EC10E221788E900FDDEA9 /* swiftlint.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = swiftlint.sh; sourceTree = "<group>"; };
+		FCC16AF52245EA9C008F9CF6 /* DemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				FC8CBC17220BD77400E6BA82 /* Assets.xcassets */,
 				FC8CBC19220BD77400E6BA82 /* LaunchScreen.storyboard */,
 				FC8CBC1C220BD77400E6BA82 /* Info.plist */,
+				FCC16AF52245EA9C008F9CF6 /* DemoViewController.swift */,
 			);
 			path = Marathoner;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				FC8CBC39220C02F200E6BA82 /* DataStore.swift in Sources */,
 				FC8CBC2D220C015200E6BA82 /* DateTableViewCell.swift in Sources */,
 				FC8CBC2B220BF2B000E6BA82 /* RunLogic.swift in Sources */,
+				FCC16AF62245EA9C008F9CF6 /* DemoViewController.swift in Sources */,
 				FC8CBC29220BF19D00E6BA82 /* TableViewAction.swift in Sources */,
 				FC8CBC13220BD77300E6BA82 /* WorkoutViewController.swift in Sources */,
 				FC8CBC33220C017000E6BA82 /* OverviewTableViewCell.swift in Sources */,
